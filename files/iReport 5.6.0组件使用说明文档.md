@@ -144,11 +144,11 @@
 
 ![image text](https://raw.githubusercontent.com/ZJHang/warehouse/main/images/iReport/25.jpg)
 
+**数据源：new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{studentList})**
+
 > d、给List组件中的文本域绑定数据
 
 ![image text](https://raw.githubusercontent.com/ZJHang/warehouse/main/images/iReport/26.jpg)
-
-**数据源：new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{studentList})**
 
 > e、预览编译，应用于项目中即可
 
