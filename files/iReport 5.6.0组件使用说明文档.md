@@ -56,7 +56,7 @@
 
 #### 2）、添加使用
 
-拖动“Break”组件至指定区域，出现图片文件选择。
+拖动“Image”组件至指定区域，出现图片文件选择。
 
 ![image text](https://raw.githubusercontent.com/ZJHang/warehouse/main/images/iReport/11.jpg)
 
@@ -74,7 +74,7 @@
 
 #### 2）、添加使用
 
-拖动“Break”组件至指定区域，出现时间格式选择。
+拖动“Current Date”组件至指定区域，出现时间格式选择。
 
 ![image text](https://raw.githubusercontent.com/ZJHang/warehouse/main/images/iReport/14.jpg)
 
