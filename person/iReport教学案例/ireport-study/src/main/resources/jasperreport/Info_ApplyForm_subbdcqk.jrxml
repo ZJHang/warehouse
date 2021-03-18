@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="shenqinshu_ywr_subreport" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="ea886730-a4b3-466a-a6a3-eef9a10f8de1">
+	<property name="ireport.zoom" value="1.210000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="244"/>
+	<style name="zt" fontName="宋体" fontSize="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<field name="zl" class="java.lang.String"/>
+	<field name="mj" class="java.lang.String"/>
+	<field name="bdcdyh" class="java.lang.String"/>
+	<field name="yt" class="java.lang.String"/>
+	<field name="ybdcqzh" class="java.lang.String"/>
+	<field name="sqly" class="java.lang.String"/>
+	<field name="dyje" class="java.lang.String"/>
+	<field name="qlqssj" class="java.lang.String"/>
+	<field name="qljssj" class="java.lang.String"/>
+	<field name="zjjzwdyfw" class="java.lang.String"/>
+	<field name="xydbdcqzh" class="java.lang.String"/>
+	<field name="lymd" class="java.lang.String"/>
+	<field name="dyiqqssj" class="java.lang.String"/>
+	<field name="dyiqjssj" class="java.lang.String"/>
+	<field name="bz" class="java.lang.String"/>
+	<field name="bdclxtd" class="java.lang.String"/>
+	<field name="bdclxfw" class="java.lang.String"/>
+	<field name="bdclxgzw" class="java.lang.String"/>
+	<field name="bdclxsl" class="java.lang.String"/>
+	<field name="bdclxhy" class="java.lang.String"/>
+	<field name="dyfs" class="java.lang.String"/>
+	<field name="sqfbcz" class="java.lang.String"/>
+	<detail>
+		<band height="495" splitType="Immediate">
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="0" y="0" width="45" height="156" uuid="0010fbdc-3b58-49b5-a8d3-672b9bc54cf6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[不
+动
+产
+情
+况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="0" width="100" height="26" uuid="9ab4b735-d4b3-450a-8f88-8fedf9037fb6"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[坐落]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="145" y="0" width="410" height="26" uuid="21bc2a6d-901c-4d53-a44d-7aabd2fa4766"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{zl} == null || $F{zl} == "") ? " ×" : " " + $F{zl}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="26" width="100" height="26" uuid="514b925c-360a-4837-86dc-c046e0adfae0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[不动产单元号]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="145" y="26" width="410" height="26" uuid="75235d70-a8f2-4e8e-bca3-0dc37b0bc4fc"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{bdcdyh} == null || $F{bdcdyh} == "") ? " ×" : " " + $F{bdcdyh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="52" width="100" height="26" uuid="32dabfb0-f79e-4561-81d7-384f2977294b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[不动产类型]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="171" y="60" width="12" height="12" uuid="41445535-ee6d-4304-b40d-9c1c3986b637"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="171" y="60" width="12" height="12" uuid="ad21c4c2-c315-446e-b1c8-e8486fc1aeb3">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{bdclxtd}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="186" y="52" width="37" height="26" uuid="fc6ceca0-819a-4342-8c15-ed97cc3e7342"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[土地]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="227" y="60" width="12" height="12" uuid="f4a14279-0737-44fa-b724-780cde8e8d59"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="227" y="60" width="12" height="12" uuid="82b682de-608b-4ca1-b996-3fc6d8995968">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{bdclxfw}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="243" y="52" width="77" height="26" uuid="29fbee25-d758-4f1a-ac0d-16f0a34ff69e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[房屋等建筑物]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="325" y="60" width="12" height="12" uuid="5ca0aebb-4ebf-4a6a-ab8d-7f5634feceb3"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="325" y="60" width="12" height="12" uuid="69c33574-5c0f-4c91-9d66-675ae336385e">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{bdclxgzw}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="342" y="52" width="39" height="26" uuid="4b3fd187-2ff8-4337-917f-34a08bd02f2e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[构筑物]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="387" y="60" width="12" height="12" uuid="3392852a-27b0-499b-a2e4-a7fe1d7f0431"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="387" y="60" width="12" height="12" uuid="b82edc7e-8c33-4583-bdda-0a71d1fb70f0">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{bdclxsl}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="401" y="52" width="69" height="26" uuid="7e84b617-2a13-4219-b94a-4d460db9122a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[森林、林木]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="475" y="60" width="12" height="12" uuid="b616d759-e69a-4cc6-9105-f6c7dc1b58e8"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="475" y="60" width="12" height="12" uuid="6f339b5c-51a9-468c-a159-63b08a29a151">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{bdclxhy}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="490" y="52" width="65" height="26" uuid="110a2ac0-bec1-40c5-80ad-4cef66cc921c"/>
+				<box>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[海域]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="78" width="100" height="26" uuid="03067ef4-4fd5-4d7e-bec8-fa636ec9f718"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[面积]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="145" y="78" width="167" height="26" uuid="5dc79d9d-e3ee-49d9-b16b-a86c566c2d3e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{mj} == null || $F{mj} == "") ? " ×" : " " + $F{mj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="312" y="78" width="100" height="26" uuid="a122f9cf-6bc7-454a-8247-d9e475a61542"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[用途]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="412" y="78" width="143" height="26" uuid="3a8c0ae8-b498-45f2-adc5-153d9b189a7f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{yt} == null || $F{yt} == "") ? " ×" : " " + $F{yt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="104" width="100" height="26" uuid="088c0568-d16b-4530-bc4b-b68df4de06ea"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[原不动产权证书号]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="145" y="104" width="410" height="26" uuid="df0909ac-7fa7-4d68-aaa3-7726d93ce1a3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{ybdcqzh} == null || $F{ybdcqzh} == "") ? " ×" : " " + $F{ybdcqzh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="130" width="510" height="26" uuid="8f51be8a-dce9-4b52-854b-9b8e3d7a4cd2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[ 说明：其他不动产情况以权籍调查成果和权属来源证明文件为准。]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="0" y="156" width="45" height="63" uuid="17663be2-4db8-46e0-851d-740382eb9209"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="156" width="67" height="63" uuid="5242ec28-0ea6-4f7d-9eb3-08666b58405a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[申
+请
+理
+由]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="112" y="156" width="443" height="63" uuid="b04be466-8d23-45b3-85ca-7384ae4e0f45"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{sqly} == null || $F{sqly} == "") ? " ×" : " " + $F{sqly}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="0" y="219" width="45" height="114" uuid="2cecae4d-0054-4149-937c-fbebc4117a1b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[申
+请
+理
+由
+及
+内
+容]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="45" y="219" width="67" height="25" uuid="985a32cf-72a3-40e4-8cf4-aa010358e466"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="219" width="50" height="25" uuid="41304690-c806-4a79-b235-8912a9e6f134"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[抵押方式]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="171" y="226" width="12" height="12" uuid="ca349c83-19eb-43c2-b6c2-e788161c3a88"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="171" y="226" width="12" height="12" uuid="33775fb0-647b-4875-a443-721b4401f0ed">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{dyfs}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="186" y="219" width="74" height="25" uuid="e997d8ea-bbf4-4c28-8c19-5ae7560d56ab"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[一般抵押]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="265" y="226" width="12" height="12" uuid="4d61e51c-fad2-4d05-b069-28e4a3b26df5"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="265" y="226" width="12" height="12" uuid="c747f3e6-b8dd-4a7a-b186-6710086adbd8">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{dyfs}.equals("2"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="281" y="219" width="100" height="25" uuid="e734f62e-c196-42fb-b5f3-f007615674cf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[最高额抵押]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="455" y="219" width="100" height="25" uuid="59c3a3f7-09dc-4c06-bba6-7f25e40bfa46"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="244" width="67" height="50" uuid="620be5df-4169-4935-8c34-ce2fa30ed929"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[抵
+押
+权]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="244" width="50" height="25" uuid="948aaf0b-3472-495c-b032-53b81d86a990"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[抵押金额]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="162" y="244" width="393" height="25" uuid="2ff310f9-8a82-47c0-b50c-ceb064750f44"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{dyje} == null || $F{dyje} == "") ? " ×" : " " + $F{dyje}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="269" width="50" height="25" uuid="fd6f93e3-8db3-4518-a265-cf730d087461"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[抵押期限]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="162" y="269" width="38" height="25" uuid="e0f280ed-942d-4bdc-9724-9bfbc7347b36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[自]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="200" y="269" width="162" height="25" uuid="211ad1cd-abb6-426b-b43b-a7f4dba56f3a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{qlqssj} == null || $F{qlqssj} == "") ? "×" : $F{qlqssj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="362" y="269" width="35" height="25" uuid="b55c290b-c1f9-40d5-acb4-0f09531b6b82"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[至]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="397" y="269" width="158" height="25" uuid="7442cd18-533e-4be7-83c7-838bc08f8efe"/>
+				<box>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{qljssj} == null || $F{qljssj} == "") ? "×" : $F{qljssj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="45" y="294" width="67" height="39" uuid="4c069bad-1c0c-4cef-9672-6c47aa1772fc"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="294" width="50" height="39" uuid="0debdf70-af2a-428a-a5c1-57ff551edde7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[在建建筑物
+抵押范围]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="162" y="294" width="393" height="39" uuid="4cb4b533-1105-4609-976b-a576e304d684"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{zjjzwdyfw} == null || $F{zjjzwdyfw} == "") ? " ×" : " " + $F{zjjzwdyfw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="0" y="333" width="45" height="90" uuid="bd4ab820-49dc-4ab7-a614-ff0ff67da955"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="333" width="67" height="90" uuid="766f9e97-7ede-40ea-b999-bfad18e38cec"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[地
+役
+权]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="333" width="50" height="40" uuid="c05ac730-df8a-406d-892f-36ce18fecda0"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="10"/>
+				</textElement>
+				<text><![CDATA[需役地不动产权证书号]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="162" y="333" width="393" height="40" uuid="82793750-fc21-43c1-828e-536078469087"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{xydbdcqzh} == null || $F{xydbdcqzh} == "") ? " ×" : " " + $F{xydbdcqzh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="373" width="50" height="25" uuid="69ff6581-632c-4ff9-b6aa-ef0aeb522168"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[利用目的]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="162" y="373" width="393" height="25" uuid="a713dd69-097e-4b6a-832e-b7d0c9a17f7c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{lymd} == null || $F{lymd} == "") ? " ×" : " " + $F{lymd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="112" y="398" width="50" height="25" uuid="1b1acabb-58b1-426e-a653-720786f1c732"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[利用期限]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="162" y="399" width="38" height="24" uuid="bb37ad3b-10ec-491c-8786-9cfab5cd7e37"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[自]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="200" y="398" width="162" height="25" uuid="532526b6-edbb-4ea6-9d90-591e74f5b432"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{dyiqqssj} == null || $F{dyiqqssj} == "") ? "×" : $F{dyiqqssj}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="362" y="398" width="35" height="25" uuid="6a195422-faa4-4d4d-9bfb-4df39b91c437"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[至]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="397" y="398" width="158" height="25" uuid="4dc26b80-8e27-41aa-98b1-06e9cf5cd7a6"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{dyiqjssj} == null || $F{dyiqjssj} == "") ? "×" : $F{dyiqjssj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="0" y="423" width="45" height="25" uuid="150b9b64-5db9-4c40-b644-ac0450309563"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="45" y="423" width="117" height="25" uuid="5893e827-fc19-4636-ac86-a441e4a951b4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[申请分别持证]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="171" y="430" width="12" height="12" uuid="9814cdc7-3bc5-491d-af70-512ef6dc5a14"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="171" y="430" width="12" height="12" uuid="e48a781f-bc31-4748-a244-8a7f658cfb20">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{sqfbcz}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="186" y="423" width="33" height="25" uuid="73399c2e-71c5-4d4e-9854-e03cde947eb9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[是]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="230" y="430" width="12" height="12" uuid="83f6be85-f6f9-4727-8188-95138aba7608"/>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"fasle.jpg"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement style="zt" positionType="Float" x="230" y="430" width="12" height="12" uuid="ed1cb46b-9316-47b1-8ac0-842a407cc3ff">
+					<printWhenExpression><![CDATA[new java.lang.Boolean($F{sqfbcz}.equals("0"))]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA[$P{SUBREPORT_DIR}+"true.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="246" y="423" width="73" height="25" uuid="642c0d94-8c58-4933-b2e7-e2ef960b5ffb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<text><![CDATA[否]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="455" y="423" width="100" height="25" uuid="bffd7a98-6fa3-477e-9d87-88f58c64c50f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="zt" positionType="Float" x="0" y="448" width="45" height="47" uuid="78a118a9-1970-442e-b695-4c03304694a2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[备
+注]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="zt" positionType="Float" x="45" y="448" width="510" height="47" uuid="8a51dd83-439d-45eb-a08a-7b27a37821c7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{bz} == null || $F{bz} == "") ? " ×" : " " + $F{bz}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

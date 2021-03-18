@@ -1,0 +1,14 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: ireport-study
+    nameText: 报表制作及生成pdf服务
+    version: 1.0.0
+
+gisq:
+  microreports:
+    base-path: D:/iReport教案/ireport-study/src/main/resources/jasperreport
+    enable-add-water: false
+    water-content: 浙江臻善

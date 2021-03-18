@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93a57999-cca6-482b-ab1e-1fd324b69ccf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="chinese" fontName="宋体" fontSize="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="dd71f844-0858-4a1b-9822-e00f801b01dc">
+		<field name="name" class="java.lang.String"/>
+		<field name="age" class="java.lang.String"/>
+		<field name="sex" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\iReport教案\\ireport-study\\src\\main\\resources\\jasperreport\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="className" class="java.lang.String"/>
+	<field name="studentList" class="java.util.List"/>
+	<detail>
+		<band height="217" splitType="Stretch">
+			<textField>
+				<reportElement style="chinese" x="0" y="0" width="555" height="44" uuid="90e9c2f8-f522-4712-aae5-573e19589bef"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{className}]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement key="table 2" style="table 2" x="0" y="78" width="555" height="100" uuid="35decd5e-1323-4b3c-87a2-6b65021853b2"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1" uuid="01031c80-335e-450d-9aac-51f92f1b9954">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{studentList})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="3bed6975-fd5a-47d8-a1b1-986234f3ad84">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement style="chinese" x="0" y="0" width="90" height="30" uuid="0169a686-8e5c-4344-9ee2-7c19ddf9d0b7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[姓名]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 2_TD" height="38" rowSpan="1">
+							<textField>
+								<reportElement style="chinese" x="0" y="0" width="90" height="38" uuid="b44150c3-df92-4141-959e-88156e74313b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[($F{name} == null || $F{name} == "") ? "×" : $F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c624bb21-bfa4-4c3a-8f19-d386799140ea">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement style="chinese" x="0" y="0" width="90" height="30" uuid="d28d270e-1f35-4976-875a-a42daedce2b1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[年龄]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 2_TD" height="38" rowSpan="1">
+							<textField>
+								<reportElement style="chinese" x="0" y="0" width="90" height="38" uuid="89ba5584-3fa6-4aa2-aae0-a67798e89848"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[($F{age} == null || $F{age} == "") ? "×" : $F{age}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="70ae60df-1ff6-4002-8ba0-fe1e13629063">
+						<jr:tableHeader style="table 2_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement style="chinese" x="0" y="0" width="90" height="30" uuid="e8d8890e-5946-4c29-a0ab-7ff64d4c3e31"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<text><![CDATA[性别]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 2_TD" height="38" rowSpan="1">
+							<textField>
+								<reportElement style="chinese" x="0" y="0" width="90" height="38" uuid="59abb1a2-6c9e-4ae5-90a2-3feed2e66416"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[($F{sex} == null || $F{sex} == "") ? "×" : $F{sex}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
