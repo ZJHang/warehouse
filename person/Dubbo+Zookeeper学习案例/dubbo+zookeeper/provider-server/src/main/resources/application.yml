@@ -1,0 +1,13 @@
+server:
+  port: 8001
+
+dubbo:
+  application:
+    # 服务应用名字
+    name: provider-server
+  registry:
+    # 注册中心地址
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    # 扫描指定包下服务
+    base-packages: com.zjhang.service
